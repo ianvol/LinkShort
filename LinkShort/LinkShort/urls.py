@@ -2,14 +2,13 @@
 Definition of urls for LinkShort.
 """
 
-from datetime import datetime
-from django.urls import include, path
 from django.contrib import admin
-from django.contrib.auth.views import LoginView, LogoutView
-from app import forms, views
-
+from django.urls import include, path
 
 urlpatterns = [
-    path("", views.index, name="index"),
-
+    path('', include('app.urls')),  # Include the URLs from 'app/urls.py'
+    path("admin/", admin.site.urls),
 ]
+
+
+

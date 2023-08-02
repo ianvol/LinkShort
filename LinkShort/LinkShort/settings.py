@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
+from decouple import config
 import os
 import posixpath
 
@@ -20,10 +21,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'f865e677-7c69-43fc-b184-3abbcfc5eef9'
+SECRET_KEY = config("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
+DOMAIN_NAME = 'linkshorter.mooo.com'
 
 ALLOWED_HOSTS = []
 
@@ -59,7 +62,7 @@ ROOT_URLCONF = 'LinkShort.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'app', 'templates', 'app')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

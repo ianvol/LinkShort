@@ -35,6 +35,9 @@
     <Compile Include="app\admin.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="app\apps.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="app\urls.py">
       <SubType>Code</SubType>
     </Compile>
@@ -61,6 +64,8 @@
     <Folder Include="LinkShort\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".env" />
+    <Content Include=".gitignore" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
     <Content Include="app\static\app\content\bootstrap.css" />
