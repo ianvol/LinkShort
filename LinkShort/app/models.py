@@ -8,7 +8,7 @@ class URL(models.Model):
     long_url = models.URLField()
     short_url = models.CharField(max_length=10, unique=True)
     created_at = models.DateTimeField(auto_now_add=True)
-    uuid = models.UUIDField(default=uuid.uuid4(), editable=False, unique=True)
+    uuid = models.UUIDField(default=uuid.uuid4(), editable=False, unique=False)
 
     def __str__(self):
         return self.short_url

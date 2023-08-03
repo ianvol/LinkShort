@@ -8,13 +8,16 @@ from django.conf import settings
 from .models import URL
 
 def index(request):
+    context = {}
+    context['title'] = 'Link Shortener'
     if request.method == 'POST':
         long_url = request.POST.get('long_url')
         if long_url:
             short_url = generate_short_url()
             url = URL(long_url=long_url, short_url=short_url)
             url.save()
-    return render(request, 'index.html')
+            context['short_url'] = short_url
+    return render(request, 'index.html', context)
 
 def generate_short_url():
     characters = string.ascii_letters + string.digits
