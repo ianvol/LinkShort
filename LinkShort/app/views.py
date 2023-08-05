@@ -24,6 +24,8 @@ def generate_short_url():
     short_url = ''.join(random.choices(characters, k=6))
     return f'{settings.DOMAIN_NAME}/{short_url}'
 
+def my_links(request):
+    return render(request, 'my_links.html')
 #def redirect_to_long_url(request, short_url):
 #    try:
 #        url = URL.objects.get(short_url=short_url)

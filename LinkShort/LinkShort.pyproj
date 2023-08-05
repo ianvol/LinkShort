@@ -50,6 +50,14 @@
     <Compile Include="LinkShort\settings.py" />
     <Compile Include="LinkShort\urls.py" />
     <Compile Include="LinkShort\wsgi.py" />
+    <Compile Include="Members\admin.py" />
+    <Compile Include="Members\apps.py" />
+    <Compile Include="Members\migrations\__init__.py" />
+    <Compile Include="Members\models.py" />
+    <Compile Include="Members\tests.py" />
+    <Compile Include="Members\urls.py" />
+    <Compile Include="Members\views.py" />
+    <Compile Include="Members\__init__.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\" />
@@ -62,10 +70,18 @@
     <Folder Include="app\templates\" />
     <Folder Include="app\templates\app\" />
     <Folder Include="LinkShort\" />
+    <Folder Include="Members\" />
+    <Folder Include="Members\migrations\" />
+    <Folder Include="Members\templates\" />
+    <Folder Include="Members\templates\authenticate\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include=".env" />
     <Content Include=".gitignore" />
+    <Content Include="app\templates\app\base.html" />
+    <Content Include="app\templates\app\my_links.html" />
+    <Content Include="app\templates\app\navbar.html" />
+    <Content Include="Members\templates\authenticate\login.html" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
     <Content Include="app\static\app\content\bootstrap.css" />
