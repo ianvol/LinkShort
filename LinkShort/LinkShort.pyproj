@@ -52,6 +52,9 @@
     <Compile Include="LinkShort\wsgi.py" />
     <Compile Include="Members\admin.py" />
     <Compile Include="Members\apps.py" />
+    <Compile Include="Members\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Members\migrations\__init__.py" />
     <Compile Include="Members\models.py" />
     <Compile Include="Members\tests.py" />
@@ -79,9 +82,11 @@
     <Content Include=".env" />
     <Content Include=".gitignore" />
     <Content Include="app\templates\app\base.html" />
+    <Content Include="app\templates\app\login_links.html" />
     <Content Include="app\templates\app\my_links.html" />
     <Content Include="app\templates\app\navbar.html" />
     <Content Include="Members\templates\authenticate\login.html" />
+    <Content Include="Members\templates\authenticate\register.html" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
     <Content Include="app\static\app\content\bootstrap.css" />
